@@ -134,11 +134,11 @@ spec:
   containers:
   - name: my-pod
     image: xilinxatg/fpga-verify:latest
-  resources:
-    limits:
-      xilinx.com/fpga-xilinx_u200_xdma_201820_1-1535712995: 1
-  command: ["/bin/sh"]
-  args: ["-c", "while true; do echo hello; sleep 5;done;"] 
+    resources:
+      limits:
+        xilinx.com/fpga-xilinx_u200_xdma_201820_1-1535712995: 1
+    command: ["/bin/sh"]
+    args: ["-c", "while true; do echo hello; sleep 5;done;"]
 ```
 
 Deploy the pod now
